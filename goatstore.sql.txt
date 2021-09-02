@@ -1,0 +1,70 @@
+CREATE SCHEMA lucystore;
+USE lucystore;
+
+CREATE TABLE Users(
+	user_id int (8) UNSIGNED,
+	username varchar (50),
+	password varchar (16),
+	lname varchar (32),
+	fname varchar (32),
+	middle varchar (2),
+	email varchar (50),
+	contact_number int (11),
+
+	PRIMARY KEY (user_id)
+);
+
+CREATE TABLE Customers(
+	cust_id int NOT NULL AUTO_INCREMENT,
+	cust_lname varchar (32),
+	cust_fname varchar (32),
+	cust_email varchar (50),
+	cust_contact_number int (11),
+	cust_address varchar (100),
+
+	PRIMARY KEY (cust_id)
+);
+
+CREATE TABLE Products(
+	product_id int (8) UNSIGNED,
+	product_name varchar (50),
+	description varchar (200),
+	price_per_kilo double,
+	quantity float,
+
+	PRIMARY KEY (product_id)
+);
+
+CREATE TABLE Orders(
+	order_id int NOT NULL AUTO_INCREMENT,
+	cust_id int,
+	product_id int (8) UNSIGNED,
+	quantity_ordered float,
+	total_price double, 
+	date_ordered DATE,
+	deliver_date DATE,
+	status ENUM('Pending','Delivered','Cancelled'),
+
+	PRIMARY KEY (order_id),
+	FOREIGN KEY (cust_id) REFERENCES Customers(cust_id),
+	FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+
+CREATE TABLE History(
+	history_id int NOT NULL AUTO_INCREMENT,
+	order_id int,
+	user_id int (8) UNSIGNED,
+	datetime DATETIME,
+
+	PRIMARY KEY (history_id),
+	FOREIGN KEY (user_id) REFERENCES Users(user_id),
+	FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
+
+INSERT INTO Users(user_id,username,password,lname,fname,middle,email,contact_number) VALUES (1,"Maxine",1,"Genon","Nicole","S.","nicole@gmail.com",172647);
+
+INSERT INTO Products(product_id,product_name,description,price_per_kilo,quantity) VALUES (1001,"Chicken Paa","Fry",170,20),(1002,"Chicken Thigh","Fry",190,35),(1003,"Chicken Breast","Fry",210,20),(1004,"Pork Thigh","Fry",210,15),(1005,"Pork Chop","Fry",250,27);
+
+INSERT INTO Customers(cust_id,cust_lname,cust_fname,cust_email,cust_contact_number,cust_address) VALUES (1,"Avan","Jason","jason@gmail.com",634864,"Mandaue"),(2,"Labans","Carms","carms@gmail.com",634874,"Talamban"),(3,"Gens","Nics","nic@gmail.com",58864,"Maribago");
+
+INSERT INTO Orders(order_id,cust_id,product_id,quantity_ordered,total_price,date_ordered,deliver_date,status) VALUES (1,1,1001,2,340,"2020-04-18","2020-04-20","Pending"),(2,1,1002,3,570,"2020-03-19","2020-03-22","Pending"),(3,2,1004,5,1050,"2020-04-21","2020-04-25","Pending"),(4,3,1005,5,1250,"2020-04-18","2020-04-20","Pending"),(5,1,1003,2,420,"2020-04-18","2020-04-20","Pending");
