@@ -16,46 +16,29 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   	<style type="text/css">
-  		
   	</style>
+    <link rel="stylesheet" href="css/Fontawesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
 </head>
 <body>
-	<div style="background: linear-gradient(to bottom, #cc0000 0%, #ff99cc 100%);">
-		<img src="Logo.png" style="border-radius:5px; margin-top:20px; margin-bottom:20px; margin-left:20px;">
-	</div>
+    
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="logo">Lololong & Lucy</li>
+	<li class="nav-link"><a href="home.php">Home</a></li>
+        <li class="nav-link"><a href="products.php">Products</a></li>
+        <li class="nav-link"><a href="neworder.php">New Order</a></li>
+        <li class="nav-link"><a href="orders.php">Orders</a></li>
+        <li class="nav-link"><a href="history.php">History</a></li>
+        <li class="nav-link"><a href="logout.php">Logout</a></li>
 
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  		<!-- Brand -->
-	  <a class="navbar-brand" href="home.php">
-	  		<img src="logo.png" alt="Logo" style="width:40px; border-radius:40px;">
-	  </a>
-
-	  <!-- Toggler/collapsibe Button -->
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <!-- Navbar links -->
-	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-	    <ul class="navbar-nav">
-	      <li class="nav-item">
-	        <a class="nav-link" href="products.php">Products</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="neworder.php">New Order</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="orders.php">Orders</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="history.php">History</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="logout.php">Logout</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
+        
+    </ul>
+</nav>
 
 		<?php
 			if(isset($_POST['submit'])){
@@ -158,5 +141,17 @@
 		
 	</div>
 	</div>
+
+	<!------jquery---->
+<script src="js/jquery.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.btn').click(function(){
+            $('.nav-link').toggleClass("show");
+            $('ul li').toggleClass("hide")
+        });
+    });
+</script>
 </body>
 </html>

@@ -14,80 +14,29 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  	<style>
-		/* The Modal (background) */
-		.modal {
-		  display: none; /* Hidden by default */
-		  position: fixed; /* Stay in place */
-		  z-index: 1; /* Sit on top */
-		  padding-top: 100px; /* Location of the box */
-		  left: 0;
-		  top: 0;
-		  width: 100%; /* Full width */
-		  height: 100%; /* Full height */
-		  overflow: auto; /* Enable scroll if needed */
-		  background-color: rgb(0,0,0); /* Fallback color */
-		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		}
+    <link rel="stylesheet" href="css/Fontawesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    
 
-		/* Modal Content */
-		.modal-content {
-		  background-color: #fefefe;
-		  margin: auto;
-		  padding: 20px;
-		  border: 1px solid #888;
-		  width: 80%;
-		}
-
-		/* The Close Button */
-		.close {
-		  color: #aaaaaa;
-		  font-size: 28px;
-		  font-weight: bold;
-		}
-
-		.close:hover,
-		.close:focus {
-		  color: #000;
-		  text-decoration: none;
-		  cursor: pointer;
-		}
-	</style>
 </head>
 <body>
-	<div style="background: linear-gradient(to bottom, #cc0000 0%, #ff99cc 100%);"><img src="Logo.png" style="border-radius:5px; margin-top:20px; margin-bottom:20px; margin-left:20px;"></div>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  		<!-- Brand -->
-	  	<a class="navbar-brand" href="home.php">
-	  		<img src="logo.png" alt="Logo" style="width:40px; border-radius:40px;">
-	  	</a>
+    
+</head>
+<body>
+<nav>
+	
+    <ul>
+        <li class="logo">Lololong & Lucy</li>
+	<li class="nav-link"><a href="home.php">Home</a></li>
+        <li class="nav-link"><a href="products.php">Products</a></li>
+        <li class="nav-link"><a href="neworder.php">New Order</a></li>
+        <li class="nav-link"><a href="orders.php">Orders</a></li>
+        <li class="nav-link"><a href="history.php">History</a></li>
+        <li class="nav-link"><a href="logout.php">Logout</a></li>
 
-		  <!-- Toggler/collapsibe Button -->
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-
-	  <!-- Navbar links -->
-	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-	    <ul class="navbar-nav">
-	      <li class="nav-item">
-	        <a class="nav-link" href="products.php">Products</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="neworder.php">New Order</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="orders.php">Orders</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="history.php">History</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="logout.php">Logout</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
+        
+    </ul>
+</nav>
 
 	<?php
 		if(isset($_POST['register'])){
@@ -175,6 +124,14 @@
 	    modal.style.display = "none";
 	  }
 	}
+
+	$(document).ready(function(){
+        $('.btn').click(function(){
+            $('.nav-link').toggleClass("show");
+            $('ul li').toggleClass("hide")
+        });
+    });
+
 	</script>
 </body>
 </html>
