@@ -19,6 +19,47 @@
     
 
 </head>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 10000; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  
 <body>
     
 </head>
@@ -26,7 +67,7 @@
 <nav>
 	
     <ul>
-        <li class="logo">Lololong & Lucy</li>
+        <li class="logo">Lolong & Lucy</li>
 	<li class="nav-link"><a href="home.php">Home</a></li>
         <li class="nav-link"><a href="products.php">Products</a></li>
         <li class="nav-link"><a href="neworder.php">New Order</a></li>
@@ -94,7 +135,7 @@
 					<label>Email: </label>
 					<input type="email" name="email" class="form-control" placeholder="Enter email" required>
 					<label>Contact Number: </label>
-					<input type="number" name="contact" class="form-control" placeholder="Enter contact number" required>
+					<input type="text" name="contact" class="form-control" placeholder="Enter contact number" required>
 					<br><br></div>
 
 					<input type="submit" name="register" class="btn btn-primary" value="Register"><br><br>

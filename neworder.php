@@ -28,7 +28,7 @@
 <body>
 <nav>
     <ul>
-        <li class="logo">Lololong & Lucy</li>
+        <li class="logo">Lolong & Lucy</li>
 	<li class="nav-link"><a href="home.php">Home</a></li>
         <li class="nav-link"><a href="products.php">Products</a></li>
         <li class="nav-link"><a href="neworder.php">New Order</a></li>
@@ -111,7 +111,7 @@
 			<label>Email: </label>
 			<input type="email" name="email" class="form-control"><br>
 			<label>Contact Number: </label>
-			<input type="number" name="contact" class="form-control" required><br>
+			<input type="text" name="contact" class="form-control" required><br>
 			<label>Customer Address: </label>
 			<input type="text" name="address" class="form-control" required><br><br>
 
@@ -129,7 +129,7 @@
 			}
 		?>
 			</select><br>
-			<label>Quantity: </label>
+			<label>Quantity: (KG)</label>
 			<input type="number" name="qty" class="form-control"><br>
 			<label>Date Ordered: </label>
 			<input type="date" name="dateor" class="form-control"><br>

@@ -24,7 +24,7 @@
 <body>
 <nav>
     <ul>
-        <li class="logo">Lololong & Lucy</li>
+        <li class="logo">Lolong & Lucy</li>
 	<li class="nav-link"><a href="home.php">Home</a></li>
         <li class="nav-link"><a href="products.php">Products</a></li>
         <li class="nav-link"><a href="neworder.php">New Order</a></li>

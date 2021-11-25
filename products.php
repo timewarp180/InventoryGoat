@@ -64,7 +64,7 @@
 <body>
 <nav>
     <ul>
-        <li class="logo">Lololong & Lucy</li>
+        <li class="logo">Lolong & Lucy</li>
 	<li class="nav-link"><a href="home.php">Home</a></li>
         <li class="nav-link"><a href="products.php">Products</a></li>
         <li class="nav-link"><a href="neworder.php">New Order</a></li>
@@ -107,7 +107,7 @@
           <input type="text" class="form-control" name="desc" required><br>
           <label>Price per kilogram: </label>
           <input type="number" class="form-control" name="price" required><br>
-          <label>Stock: </label>
+          <label>Stock: (KG)</label> 
           <input type="number" class="form-control" name="quantity" required><br><br>
         </div>
 
